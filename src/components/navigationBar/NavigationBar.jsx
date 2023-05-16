@@ -10,13 +10,20 @@ const NavigationBar = () => {
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false)
   }
+
   useEffect(() => {
     window.addEventListener("scroll", isActive);
 
     return () => {
       window.removeEventListener("scroll", isActive);
     }
-  }, [])
+  }, []);
+
+  const currentUser = {
+    id: 1,
+    userName: "John Doe",
+    isSeller: true
+  }
 
   return (
     <div className={active ? "navigationbar active" : "navigationbar"}>
@@ -32,10 +39,33 @@ const NavigationBar = () => {
           <span>Fiverr Business</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Become a seller</span>
           <span>Sign in</span>
+          {!(currentUser?.isSeller) && <span >Become a seller</span>}
 
-          <button>Join</button>
+          {!currentUser && <button>Join</button>}
+
+          {currentUser && (
+            <div className="user"> 
+              <img 
+                src="https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                alt="">
+              </img>
+              <span>{currentUser?.userName}</span>
+              <div className="options">
+                {/* 2 cases: currentUser is a seller or not */}
+                {
+                  currentUser?.isSeller && (
+                  <>
+                    <span>Gigs</span>
+                    <span>Add New Gig</span>
+                  </>
+                )}
+                <span>Orders</span>
+                <span>Messages</span>
+                <span>Logout</span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       

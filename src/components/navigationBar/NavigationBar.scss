@@ -50,6 +50,19 @@
                     border-color: #1dbf73
                 }
             }
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 
