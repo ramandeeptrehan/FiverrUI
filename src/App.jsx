@@ -1,7 +1,41 @@
 import NavigationBar from "./components/navigationBar/NavigationBar"
+import Footer from "./components/footer/Footer"
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet
+} from "react-router-dom"
 
 function App() {
 
+  const Layout = () => {
+    return (
+      <div className="app">
+        <NavigationBar/>
+        <Outlet/>
+        <Footer/>
+      </div>
+    )
+  }
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout/>
+
+      //For each page, we will have a different element
+
+    }
+  ]);
+
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
+
+  {/*
   return (
     <div>
       Hello world! 
@@ -26,6 +60,7 @@ function App() {
       </h1>
     </div>
   )
+  */}
 }
 
 export default App
