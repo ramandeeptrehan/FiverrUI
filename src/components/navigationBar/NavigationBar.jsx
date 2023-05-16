@@ -4,10 +4,10 @@ import "./NavigationBar.scss"
 
 const NavigationBar = () => {
 
-  //const [active, setActive] = useState(false);
+  const [active, setActive] = useState(true);
 
   return (
-    <div className="navigationbar">
+    <div className={active ? "navigationbar active" : "navigationbar"}>
       <div className="container">
         <div className="logo">
           {/* this is coming from react-router */}
@@ -26,13 +26,16 @@ const NavigationBar = () => {
           <button>Join</button>
         </div>
       </div>
-
-      <hr />
-
-      <div className="menu">
-        <span>Test</span>
-        <span>Test2</span>
-      </div>
+      
+      {active && (
+      <> {/* use react fragments when using multiple components*/}
+        <hr />
+        <div className="menu">
+          <span>Test</span>
+          <span>Test2</span>
+        </div>
+      </>
+      )}
     </div>
   )
 }
