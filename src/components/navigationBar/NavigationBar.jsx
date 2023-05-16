@@ -1,10 +1,22 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react'
 import "./NavigationBar.scss"
 
 const NavigationBar = () => {
 
   const [active, setActive] = useState(true);
+
+  const isActive = () => {
+    window.scrollY > 0 ? setActive(true) : setActive(false)
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", isActive);
+
+    return () => {
+      window.removeEventListener("scroll", isActive);
+    }
+  }, [])
 
   return (
     <div className={active ? "navigationbar active" : "navigationbar"}>
