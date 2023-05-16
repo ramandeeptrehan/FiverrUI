@@ -4,6 +4,9 @@
     align-items: center;
     background-color: green;
     color: white;
+    transition: 0.5s all ease; //to add gradual change when scrolling up/down from navigation bar
+    position: sticky; //to keep navigation bar on top whenver we scroll down. Like row freeze in google sheets
+    top: 0; //position of sticky component when scrolling is done. 0 means keep it at top
 
     &.active {
         background-color: white;
