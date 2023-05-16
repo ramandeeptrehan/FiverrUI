@@ -6,6 +6,7 @@ import "./NavigationBar.scss"
 const NavigationBar = () => {
 
   const [active, setActive] = useState(true);
+  const [userOptionsOpen, setUserOptionsOpen] = useState(false);
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false)
@@ -45,25 +46,27 @@ const NavigationBar = () => {
           {!currentUser && <button>Join</button>}
 
           {currentUser && (
-            <div className="user"> 
+            <div className="user" onClick={() => setUserOptionsOpen(!userOptionsOpen)}> 
               <img 
                 src="https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600" 
                 alt="">
               </img>
               <span>{currentUser?.userName}</span>
-              <div className="options">
-                {/* 2 cases: currentUser is a seller or not */}
-                {
-                  currentUser?.isSeller && (
-                  <>
-                    <span>Gigs</span>
-                    <span>Add New Gig</span>
-                  </>
-                )}
-                <span>Orders</span>
-                <span>Messages</span>
-                <span>Logout</span>
-              </div>
+              {userOptionsOpen && 
+                <div className="options">
+                  {/* 2 cases: currentUser is a seller or not */}
+                  {
+                    currentUser?.isSeller && (
+                    <>
+                      <span>Gigs</span>
+                      <span>Add New Gig</span>
+                    </>
+                  )}
+                  <span>Orders</span>
+                  <span>Messages</span>
+                  <span>Logout</span>
+                </div>
+              }
             </div>
           )}
         </div>
