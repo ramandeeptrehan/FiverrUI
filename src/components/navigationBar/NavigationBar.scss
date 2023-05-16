@@ -1,16 +1,62 @@
-.navigationBar {
+.navigationbar {
+    display: flex;
+    flex-direction: column; //so that components among each other are aligned to the south, not to the right side
+    align-items: center;
+    background-color: green;
+    color: white;
     .container {
-        .logo {
-            .text {
+        width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0px;
 
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            .text {
+                
             }
             .dot {
-
+                color: #1dbf73;
             }
         }
 
         .links {
-            span {}
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            font-weight: 500;
+            font-family: "Montserrat", sans-serif;
+            
+            button {
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid white;
+                cursor: pointer;
+                background-color: transparent;
+
+                &:hover { //to add hover component to Join button
+                    background-color: #1dbf73;
+                    border-color: #1dbf73
+                }
+            }
         }
+    }
+
+    hr {
+        width: 100%;
+        height: 0;
+        border: 0.5px solid lightgrey;
+    }
+
+    .menu {
+        width: 1400px;
+        padding: 10x 0x; //padding from top and bottom in the component
+        display: flex;
+        justify-content: space-between;
+        font-weight: 300;
+        color: white;
+        font-family: "Montserrat", sans-serif;
     }
 }
