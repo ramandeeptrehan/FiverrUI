@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import "./NavigationBar.scss"
+import { Link } from "react-router-dom"
 
 const NavigationBar = () => {
 
@@ -31,9 +32,9 @@ const NavigationBar = () => {
       <div className="container">
         <div className="logo">
           {/* this is coming from react-router */}
-          {/* <Link to="/"> */}
-          <span className="text">fiverr</span>
-          {/* </Link>  */}
+          <Link to="/">
+            <span className="text">fiverr</span>
+          </Link>
           <span className="dot">.</span>
         </div>
         <div className="links">
