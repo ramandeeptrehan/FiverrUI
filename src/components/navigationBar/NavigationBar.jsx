@@ -1,17 +1,20 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import "./NavigationBar.scss"
 import { Link } from "react-router-dom"
 
 const NavigationBar = () => {
 
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const [userOptionsOpen, setUserOptionsOpen] = useState(false);
 
+  const { pathname } = useLocation();
+
   const isActive = () => {
-    window.scrollY > 0 ? setActive(true) : setActive(false)
-  }
+    window.scrollY > 0 ? setActive(true) : setActive(false);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", isActive);
@@ -28,7 +31,7 @@ const NavigationBar = () => {
   }
 
   return (
-    <div className={active ? "navigationbar active" : "navigationbar"}>
+    <div className={(active || pathname !=="/") ? "navigationbar active" : "navigationbar"}>
       <div className="container">
         <div className="logo">
           {/* this is coming from react-router */}
@@ -73,12 +76,37 @@ const NavigationBar = () => {
         </div>
       </div>
       
-      {active && (
+      {(active || pathname!=="/home") && (
       <> {/* use react fragments when using multiple components*/}
         <hr />
         <div className="menu">
-          <span>Test</span>
-          <span>Test2</span>
+          <Link className="link" to="/">
+            Graphics & Design
+          </Link>
+          <Link className="link" to="/">
+            Video & Animation
+          </Link>
+          <Link className="link" to="/">
+            Writing & Translation
+          </Link>
+          <Link className="link" to="/">
+            AI Services
+          </Link>
+          <Link className="link" to="/">
+            Digital Marketing
+          </Link>
+          <Link className="link" to="/">
+            Music & Audio
+          </Link>
+          <Link className="link" to="/">
+            Programming & Tech
+          </Link>
+          <Link className="link" to="/">
+            Business
+          </Link>
+          <Link className="link" to="/">
+            Lifestyle
+          </Link>
         </div>
       </>
       )}
