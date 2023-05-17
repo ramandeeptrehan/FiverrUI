@@ -32,7 +32,7 @@ const NavigationBar = () => {
       <div className="container">
         <div className="logo">
           {/* this is coming from react-router */}
-          <Link to="/">
+          <Link to="/" className="link">
             <span className="text">fiverr</span>
           </Link>
           <span className="dot">.</span>
@@ -59,13 +59,13 @@ const NavigationBar = () => {
                   {
                     currentUser?.isSeller && (
                     <>
-                      <span>Gigs</span>
-                      <span>Add New Gig</span>
+                      <Link to="/mygigs" className="link">Gigs</Link>
+                      <Link to="/addGig" className="link">Add New Gig</Link>
                     </>
                   )}
-                  <span>Orders</span>
-                  <span>Messages</span>
-                  <span>Logout</span>
+                  <Link to="/orders" className="link">Orders</Link>
+                  <Link to="/messages" className="link">Messages</Link>
+                  <Link to="/" className="link">Logout</Link>
                 </div>
               }
             </div>
