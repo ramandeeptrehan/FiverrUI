@@ -76,7 +76,7 @@ const NavigationBar = () => {
         </div>
       </div>
       
-      {(active || pathname!=="/home") && (
+      {(active || pathname!=="/") && (
       <> {/* use react fragments when using multiple components*/}
         <hr />
         <div className="menu">
