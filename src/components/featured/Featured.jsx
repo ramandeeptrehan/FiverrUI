@@ -9,7 +9,8 @@ const Featured = () => {
             <div className="left">
                 {/* Inside left section, we have a title, etc */}
                 <h1>
-                    Find the perfect freelance services for your business
+                    Find the perfect <i>freelance</i> services for your business 
+                    {/* <i> is added to put text in italics */}
                 </h1>
                 <div className="search">
                     <div className="searchInput">
