@@ -1,0 +1,21 @@
+.featured {
+    height: 600px; //height of this featured component
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    .container {
+        width: 1400px; //width of full component, including left and right part
+        display: flex;
+        align-items: center;
+
+        //has 2 parts: left and right and that's exactly their div names
+        .left {
+
+        }
+
+        .right {
+            
+        }
+    }
+}
