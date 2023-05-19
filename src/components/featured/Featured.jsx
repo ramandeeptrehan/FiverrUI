@@ -13,13 +13,23 @@ const Featured = () => {
                 </h1>
                 <div className="search">
                     <div className="searchInput">
-                        <img src="" alt=""></img>
+                        <img src="./public/images/search.png" alt=""></img>
                         <input type="text" placeholder='Try "building mobile app"'></input>
                     </div>
                     <button>Search</button>
                 </div>
+                <div className="popular">
+                    <span>Popular:</span>
+                    <button>Web Design</button>
+                    <button>Wordpress</button>
+                    <button>Logo Design</button>
+                    <button>AI Services</button>
+                </div>
             </div>
-            <div className="right"></div>
+            <div className="right">
+                <img src="./public/images/man.png" alt=""></img>
+            </div>
+
         </div>
     </div>
   )
