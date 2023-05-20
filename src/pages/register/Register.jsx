@@ -1,10 +1,8 @@
-import React from 'react'
-import "./Register.scss"
+import React from "react";
+import "./Register.scss";
 
 const Register = () => {
-  return (
-    <div className='register'>Register</div>
-  )
-}
+  return <div className="register">Register</div>;
+};
 
-export default Register
+export default Register;

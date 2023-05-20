@@ -1,10 +1,8 @@
-import React from 'react'
-import "./AddGig.scss"
+import React from "react";
+import "./AddGig.scss";
 
 const AddGig = () => {
-  return (
-    <div className='addGig'>Add Gig</div>
-  )
-}
+  return <div className="addGig">Add Gig</div>;
+};
 
-export default AddGig
+export default AddGig;

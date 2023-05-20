@@ -1,87 +1,84 @@
 .featured {
-    height: 600px; //height of this featured component
+  height: 600px; //height of this featured component
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  color: white;
+  .container {
+    width: 1400px; //width of full component, including left and right part
     display: flex;
-    justify-content: center;
-    background-color: green;
-    color: white;
-    .container {
-        width: 1400px; //width of full component, including left and right part
+    align-items: center;
+
+    //has 2 parts: left and right and that's exactly their div names
+    .left {
+      display: flex;
+      flex-direction: column; //so that things in left div come in different rows
+      gap: 10px; //to have gap between each of these items: h1, search and popular div
+      h1 {
+        font-size: 50px;
+
+        i {
+          font-weight: 300;
+        }
+      }
+
+      .search {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 5px;
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px; //gap between image and input div
 
-        //has 2 parts: left and right and that's exactly their div names
-        .left {
-            display: flex;
-            flex-direction: column; //so that things in left div come in different rows
-            gap: 10px; //to have gap between each of these items: h1, search and popular div
-            h1 {
-                font-size: 50px;
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px; //padding from top and bottom to this image in searchInput
+          }
 
-                i {
-                    font-weight: 300;
-                }
-            }
-
-            .search {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: white;
-                border-radius: 5px;
-                .searchInput {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px; //gap between image and input div
-
-                    img {
-                        width: 20px;
-                        height: 20px;
-                        margin: 10px; //padding from top and bottom to this image in searchInput
-                    }
-
-                    input {
-                        border: none; //remove border around this text in search tab
-                        outline: none;
-                    }
-
-
-                }
-                button {
-                    width: 120px;
-                    height: 50px;
-                    border: none; //makes it smoothly fit with UI around this part
-                    background-color: rgb(132, 179, 132);
-                    color: white;
-                    cursor: pointer;
-                }
-            }
-
-            .popular {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                span {
-
-                }
-                button {
-                    color: white;
-                    background-color: transparent;
-                    border: 1px solid white;
-                    padding: 5px 10px;
-                    border-radius: 20px;
-                    font-size: 14px;
-                    cursor: pointer;
-                }
-            }
+          input {
+            border: none; //remove border around this text in search tab
+            outline: none;
+          }
         }
-
-        .right {
-            height: 100%;
-
-            img {
-                height: 100%;
-                object-fit: contain;
-            }
+        button {
+          width: 120px;
+          height: 50px;
+          border: none; //makes it smoothly fit with UI around this part
+          background-color: rgb(132, 179, 132);
+          color: white;
+          cursor: pointer;
         }
+      }
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+        }
+        button {
+          color: white;
+          background-color: transparent;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
     }
+
+    .right {
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 }

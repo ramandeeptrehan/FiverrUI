@@ -1,10 +1,12 @@
-import React from 'react'
-import "./CategoryCard.scss"
+import React from "react";
+import "./CategoryCard.scss";
 
 const CategoryCard = () => {
   return (
-    <div>CategoryCard</div>
-  )
-}
+    <div className="categoryCard">
+      <div className="container"></div>
+    </div>
+  );
+};
 
-export default CategoryCard
+export default CategoryCard;

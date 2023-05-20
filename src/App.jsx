@@ -1,5 +1,5 @@
-import NavigationBar from "./components/navigationBar/NavigationBar"
-import Footer from "./components/footer/Footer"
+import NavigationBar from "./components/navigationBar/NavigationBar";
+import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Gigs from "./pages/gigs/Gigs";
 import Gig from "./pages/gig/Gig";
@@ -13,67 +13,61 @@ import MyGigs from "./pages/myGigs/MyGigs";
 
 import "./App.scss";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet
-} from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 function App() {
-
   const Layout = () => {
     return (
       <div className="app">
-        <NavigationBar/>
-        <Outlet/>
-        <Footer/>
+        <NavigationBar />
+        <Outlet />
+        <Footer />
       </div>
-    )
-  }
+    );
+  };
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout/>,
+      element: <Layout />,
 
       //For each page, we will have a different element
 
       children: [
         {
           path: "/",
-          element: <Home/>
+          element: <Home />,
         },
         {
           path: "/gigs",
-          element: <Gigs/>
+          element: <Gigs />,
         },
         {
           path: "/gig/:id",
-          element: <Gig/>
+          element: <Gig />,
         },
         {
           path: "/orders",
-          element: <Orders/>
+          element: <Orders />,
         },
         {
           path: "/mygigs",
-          element: <MyGigs/>
+          element: <MyGigs />,
         },
         {
           path: "/addGig",
-          element: <AddGig/>
+          element: <AddGig />,
         },
         {
           path: "/messages",
-          element: <Messages/>
+          element: <Messages />,
         },
         {
           path: "/message/:id",
-          element: <Message/>
-        }
-      ]
+          element: <Message />,
+        },
+      ],
     },
-    
   ]);
 
   return (
@@ -83,4 +77,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
