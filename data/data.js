@@ -1,4 +1,4 @@
-const cardsData = [
+export const cardsData = [
   {
     id: 1,
     title: "AI Artists",
