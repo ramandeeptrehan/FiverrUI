@@ -5,6 +5,7 @@ import Slide from "../../components/slide/Slide";
 import CategoryCard from "../../components/categoryCard/CategoryCard";
 import { cardsData } from "../../../data/data";
 import "./Home.scss";
+import ProductFeatures from "../../components/productFeatures/ProductFeatures";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           <CategoryCard item={card} key={card.id} />
         ))}
       </Slide>
+      <ProductFeatures></ProductFeatures>
     </div>
   );
 };

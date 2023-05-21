@@ -1,0 +1,51 @@
+.productFeatures {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px; //top and bottom padding values
+  .container {
+    width: 1400px;
+    align-items: center;
+    display: flex;
+    gap: 200px; //between left and right components
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      h1 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        display: flex;
+        align-items: center; //aligns items like image and text in center. Bring them to same horizontal line
+        gap: 10px;
+        font-weight: 500; //thicker
+        font-size: 18px; //size of letters
+        color: gray;
+
+        .img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        color: gray;
+        line-height: 28px;
+        letter-spacing: 1px; //spacing between letters
+      }
+    }
+
+    .right {
+      video {
+        width: 720px;
+      }
+    }
+  }
+}
