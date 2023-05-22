@@ -6,6 +6,7 @@ import CategoryCard from "../../components/categoryCard/CategoryCard";
 import { cardsData } from "../../../data/data";
 import "./Home.scss";
 import ProductFeatures from "../../components/productFeatures/ProductFeatures";
+import FiverrBusiness from "../../components/fiverrBusiness/FiverrBusiness";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         ))}
       </Slide>
       <ProductFeatures></ProductFeatures>
+      <FiverrBusiness></FiverrBusiness>
     </div>
   );
 };

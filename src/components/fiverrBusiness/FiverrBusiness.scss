@@ -1,0 +1,61 @@
+.fiverrBusiness {
+  background-color: rgb(7, 7, 110);
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px; //gives padding on top of this blue colored component
+
+  .component {
+    width: 1400px; //this brings this component in line with other components in terms of gap from left corner and right corner
+    display: flex; //keeps things to left and right
+    //flex-direction: column; //not needed since we want left and right to be on left and right, not in different rows
+    align-items: center;
+    gap: 50px;
+    .left {
+      display: flex;
+      flex-direction: column; //adds a lot of value
+      gap: 15px;
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
+        margin-bottom: 20px; //to add gap between <p> and what's below that
+      }
+
+      .title {
+        display: flex; //very important
+        color: white;
+        font-weight: 300;
+        font-size: 14px;
+        align-items: center;
+        font-weight: 300; //thicker
+        font-size: 16px; //size of letters
+        gap: 10px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      button {
+        background-color: green;
+        color: white; //text color of what's written in button
+        padding: 10px 20px; //padding of content of button within the button frame
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px; //adds margin between button and what's above it. There were multiple 'title' div. So margin should be added here in button to add margin between button and last title div element
+        margin-bottom: 20px;
+        border: none; //removed colored border and let the button merge with background
+        width: max-content; //to allow button to be size of how long text content is in the button
+      }
+    }
+
+    .right {
+      img {
+        width: 100%; //to fit the image in right component nicely
+      }
+    }
+  }
+}
